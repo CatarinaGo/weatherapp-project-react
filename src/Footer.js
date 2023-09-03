@@ -6,7 +6,7 @@ export default function Footer() {
       <p>
         <small>
           <a
-            href="https://github.com/CatarinaGo/weather-project-react"
+            href="https://github.com/CatarinaGo/weatherapp-project-react"
             target="_blank" rel="noreferrer"
           >
             Open-source code 
