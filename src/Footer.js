@@ -12,7 +12,7 @@ export default function Footer() {
             Open-source code 
           </a>
           {" "}by Catarina Gomes, hosted on {" "}
-          <a href="https://loving-torvalds-f457bf.netlify.app" target="_blank" rel="noreferrer">
+          <a href="https://stirring-froyo-72e56f.netlify.app" target="_blank" rel="noreferrer">
           Netlify
           </a>
         </small>
