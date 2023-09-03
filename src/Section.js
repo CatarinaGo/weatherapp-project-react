@@ -4,26 +4,26 @@ export default function Section() {
   return (
     <div className="Section">
       <section>
-        <h4 id="search-city"></h4>
-        <h4 id="current-city"></h4>
+        <h4 id="search-city">H4</h4>
+        <h4 id="current-city">H4</h4>
         <h5>
-          <span id="current-date"></span>
+          <span id="current-date">H5</span>
         </h5>
         <br />
         <p class="links" id="links">
-          <a href="#" class="hyperlink" id="change-temp-one-C">
+          {/*<a href="#" class="hyperlink" id="change-temp-one-C">
             C°
-          </a>{" "}
+  </a>{" "}*/}
           |
-          <a href="#" class="hyperlink" id="change-temp-one-F">
-            {" "}
-            F°
-          </a>
+         {/* <a href="#" class="hyperlink" id="change-temp-one-F">
+           {" "}
+          F°
+          </a>*/}
         </p>
         <div class="card-deck" id="currentforecast">
           <div class="card text-center border-light">
             <img src="" class="icon" id="icon" alt=""/>
-            <h5 class="card-title" id="tempone"></h5>
+            <h5 class="card-title" id="tempone">H5</h5>
             <p class="card-text" id="dayone">
               <small class="text-muted" id="descriptionone"></small>
               <br />
