@@ -28,41 +28,41 @@
   margin-bottom: 20px;
 }
 
-.Section p {
+.Form p {
   text-align: center;
 }
 
-.Section .links {
+.Form .links {
   text-align: left;
   font-size: small;
 }
 
-.Section .icon {
+.Form .icon {
   max-width: 20%;
   display: block;
   margin: 0 auto;
   color: #17a2b8;
 }
 
-.Section .text-muted {
+.Form .text-muted {
   font-size: 70%;
 }
 
-.Section #tempone {
+.Form #tempone {
   font-size: 15px;
   font-weight: 500;
 }
-.Section #descriptionone {
+.Form #descriptionone {
   text-transform: capitalize;
 }
 
-.Section .card-header {
+.Form .card-header {
   padding: 10px 10px;
 }
-.Section .card-text {
+.Form .card-text {
   margin-bottom: 12px;
 }
-.Section .card-body {
+.Form .card-body {
   text-align: center;
 }
 
