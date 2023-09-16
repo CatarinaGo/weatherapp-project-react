@@ -3,9 +3,6 @@
   text-align: center;
 }
 
-p {
-  text-align: center;
-}
 
 .weather-app-wrapper {
   max-width: 700px;
@@ -16,7 +13,7 @@ p {
   margin: 30px auto;
 }
 
-.logo {
+.Weather .logo {
   max-width: 20%;
   position: static;
   margin: 0 auto;
@@ -25,44 +22,53 @@ p {
   display: block;
 }
 
-.container h1 {
+.Weather h1 {
   margin-top: 0px;
   font-size: 30px;
   margin-bottom: 20px;
 }
 
-.links {
+.Section p {
+  text-align: center;
+}
+
+.Section .links {
   text-align: left;
   font-size: small;
 }
 
-.icon {
+.Section .icon {
   max-width: 20%;
   display: block;
   margin: 0 auto;
   color: #17a2b8;
 }
 
-.text-muted {
+.Section .text-muted {
   font-size: 70%;
 }
 
-#tempone {
+.Section #tempone {
   font-size: 15px;
   font-weight: 500;
 }
-#descriptionone {
+.Section #descriptionone {
   text-transform: capitalize;
 }
 
-.card-header {
+.Section .card-header {
   padding: 10px 10px;
 }
-.card-text {
+.Section .card-text {
   margin-bottom: 12px;
 }
-.card-body {
+.Section .card-body {
   text-align: center;
+}
+
+.Footer p {
+  text-align: center;
+  font-size: 15px;
 }
 
 #icontwo {

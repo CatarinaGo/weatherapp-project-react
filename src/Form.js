@@ -4,24 +4,24 @@ export default function Form() {
   return (
     <div className="Form">
       <form id="submit-form">
-        <div class="form-group">
-          <div class="input-group mb-3">
+        <div className="form-group">
+          <div className="input-group mb-3">
             <input
               type="text"
-              class="form-control"
-              placeholder="Type City"
+              className="form-control"
+              placeholder="Enter a City"
               aria-label="Type City"
               aria-describedby="basic-addon2"
-              autofocus
+              autoFocus="on"
               id="userInput"
               autocomplete="off"
             />
-            <div class="input-group-append">
+            <div className="input-group-append">
               <button
                 id="submit-button"
-                class="btn btn-info"
+                className="btn btn-info"
                 type="submit"
-                autofocus
+                autoFocus="on"
               >
                 Submit
               </button>

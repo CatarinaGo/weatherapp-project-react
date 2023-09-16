@@ -10,7 +10,7 @@ export default function Section() {
           <span id="current-date">H5</span>
         </h5>
         <br />
-        <p class="links" id="links">
+        <p className="links" id="links">
           {/*<a href="#" class="hyperlink" id="change-temp-one-C">
             C°
   </a>{" "}*/}
@@ -20,21 +20,21 @@ export default function Section() {
           F°
           </a>*/}
         </p>
-        <div class="card-deck" id="currentforecast">
-          <div class="card text-center border-light">
-            <img src="" class="icon" id="icon" alt=""/>
-            <h5 class="card-title" id="tempone">H5</h5>
-            <p class="card-text" id="dayone">
-              <small class="text-muted" id="descriptionone"></small>
+        <div className="card-deck" id="currentforecast">
+          <div className="card text-center border-light">
+            <img src="" className="icon" id="icon" alt=""/>
+            <h5 className="card-title" id="tempone">H5</h5>
+            <p className="card-text" id="dayone">
+              <small className="text-muted" id="descriptionone"></small>
               <br />
-              <small class="text-muted" id="wind"></small>
+              <small className="text-muted" id="wind"></small>
               <br />
-              <small class="text-muted" id="humidity"></small>
+              <small className="text-muted" id="humidity"></small>
             </p>
           </div>
         </div>
         <br />
-        <div class="card-deck text-center" id="forecast"></div>
+        <div className="card-deck text-center" id="forecast"></div>
       </section>
     </div>
   );
