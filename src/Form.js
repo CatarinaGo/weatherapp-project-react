@@ -71,7 +71,7 @@ export default function Form(props) {
           </div>
         </form>
           <section>
-            <h6 id="current-city">{weatherData.city}</h6>          
+            <h6 id="current-city">{weatherData.city}, {weatherData.country}</h6>          
             <div id="current-date"> <FormattedDate date={weatherData.date} />
             </div>
             <h6 className="current-forecast">Current Forecast</h6>
