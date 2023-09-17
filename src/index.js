@@ -20,8 +20,8 @@ root.render(
       <div className="container">
         <div className="weather-app-wrapper">
           <div className="weather-app border p-5 mt-3 border-light rounded shadow p-3 mb-5 bg-white rounded">
-            <Weather />
-            <Form />
+            <Weather  />
+            <Form defaultCity="Lisbon"/>
           </div>
         </div>
         <Footer />

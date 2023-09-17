@@ -29,8 +29,11 @@
 }
 
 .Form p {
-  text-align: center;
+  text-align:center;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
+
 
 .Form .links {
   text-align: left;
@@ -49,9 +52,18 @@
 }
 
 .Form #tempone {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 500;
 }
+
+.Form #current-city {
+ text-align: left;
+}
+.Form #current-date {
+  text-align: left;
+  font-size: 12px;;
+ }
+ 
 .Form #descriptionone {
   text-transform: capitalize;
 }
