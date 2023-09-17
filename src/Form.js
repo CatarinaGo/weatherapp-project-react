@@ -95,7 +95,7 @@ export default function Form(props) {
     );
   } else {
     let apiKey = "b4a54a5504108f7ccbdff9c1ft0d1ob3";
-    let query = "Lisbon";
+
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
     return "Loading...";
