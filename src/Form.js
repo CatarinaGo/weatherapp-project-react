@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import axios from "axios";
-
+import { RotatingLines } from 'react-loader-spinner'
 import FormattedDate from "./FormattedDate";
+import WeatherTemp from "./WeatherTemp";
 
 export default function Form(props) {
   const [ready, setReady] = useState(false);
@@ -72,7 +73,7 @@ export default function Form(props) {
         </form>
           <section>
             <h6 id="current-city">{weatherData.city}, {weatherData.country}</h6>          
-            <div id="current-date"> <FormattedDate date={weatherData.date} />
+            <div id="current-date"> Last updated on<FormattedDate date={weatherData.date} />
             </div>
             <h6 className="current-forecast">Current Forecast</h6>
             <div className="row">
@@ -80,7 +81,8 @@ export default function Form(props) {
                 <div className="card border-light">
                   <div className="card-body">
                   <img src={weatherData.iconUrl} className="icon" id="icon" alt={weatherData.description}/>
-                  <h6 className="card-title" id="currenttemp">{Math.round(weatherData.temperature)}°C</h6>
+                  <WeatherTemp celsius={weatherData.temperature} />
+                  
                   </div>
                 </div>
               </div>
@@ -101,7 +103,15 @@ export default function Form(props) {
     );
   } else {
     displayWeather();
-    return "Loading...";
+    return (
+      <RotatingLines
+        strokeColor="#facf5a"
+        strokeWidth="5"
+        animationDuration="0.75"
+        width="80"
+        visible={true}
+      />
+    );
   }
 
 
