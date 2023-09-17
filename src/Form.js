@@ -6,6 +6,7 @@ import FormattedDate from "./FormattedDate";
 export default function Form(props) {
   const [ready, setReady] = useState(false);
   const [weatherData, setweatherData] = useState({});
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse (response){
     console.log(response.data);
@@ -24,10 +25,25 @@ export default function Form(props) {
     
   }
 
+  function displayWeather(){
+    let apiKey = "b4a54a5504108f7ccbdff9c1ft0d1ob3";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
+
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    displayWeather();
+  }
+
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
+
   if (ready){
     return (
       <div className="Form">
-        <form id="submit-form">
+        <form id="submit-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <div className="input-group mb-3">
               <input
@@ -39,6 +55,7 @@ export default function Form(props) {
                 autoFocus="on"
                 id="userInput"
                 autoComplete="off"
+                onChange={updateCity}
               />
               <div className="input-group-append">
                 <button
@@ -54,20 +71,16 @@ export default function Form(props) {
           </div>
         </form>
           <section>
-            <h6 id="search-city">Search City</h6>
-            <h6 id="current-city">{weatherData.city}</h6>
-            
+            <h6 id="current-city">{weatherData.city}</h6>          
             <div id="current-date"> <FormattedDate date={weatherData.date} />
             </div>
-
-            <h6>Current Forecast</h6>
-
+            <h6 className="current-forecast">Current Forecast</h6>
             <div className="row">
               <div className="col-sm-6">
                 <div className="card border-light">
                   <div className="card-body">
                   <img src={weatherData.iconUrl} className="icon" id="icon" alt={weatherData.description}/>
-                  <h6 className="card-title" id="tempone">{Math.round(weatherData.temperature)}°C</h6>
+                  <h6 className="card-title" id="currenttemp">{Math.round(weatherData.temperature)}°C</h6>
                   </div>
                 </div>
               </div>
@@ -81,23 +94,13 @@ export default function Form(props) {
                 </div>
               </div>
             </div>
-
-
-
-
-
-
-
             <br />
             <div className="card-deck text-center" id="forecast"></div>
           </section>
           </div>
     );
   } else {
-    let apiKey = "b4a54a5504108f7ccbdff9c1ft0d1ob3";
-
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}`;
-    axios.get(apiUrl).then(handleResponse);
+    displayWeather();
     return "Loading...";
   }
 

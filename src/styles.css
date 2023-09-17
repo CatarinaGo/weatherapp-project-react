@@ -1,3 +1,11 @@
+:root {
+  --primary-color: purple;
+  --secondary-color: blue;
+  --background-color: pink;
+  --box-shadow: 5px 10px 5px 5px rgba(0, 0, 0, 0.1);
+  --primary-font: 'Lato', sans-serif;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -35,11 +43,6 @@
 }
 
 
-.Form .links {
-  text-align: left;
-  font-size: small;
-}
-
 .Form .icon {
   max-width: 20%;
   display: block;
@@ -51,31 +54,30 @@
   font-size: 70%;
 }
 
-.Form #tempone {
+ .Form .current-forecast{
+  font-size: 14px;
+  font-family:  var(--primary-font);
+ }
+.Form #currenttemp {
   font-size: 12px;
   font-weight: 500;
+  font-family:  var(--primary-font);
 }
 
 .Form #current-city {
  text-align: left;
+ font-family:  var(--primary-font);
 }
 .Form #current-date {
   text-align: left;
-  font-size: 12px;;
+  font-size: 12px;
+  font-family:  var(--primary-font);
  }
  
-.Form #descriptionone {
-  text-transform: capitalize;
-}
 
-.Form .card-header {
-  padding: 10px 10px;
-}
-.Form .card-text {
-  margin-bottom: 12px;
-}
 .Form .card-body {
   text-align: center;
+  font-family:  var(--primary-font);
 }
 
 .Footer p {
