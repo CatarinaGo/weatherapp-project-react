@@ -3,6 +3,8 @@ import axios from "axios";
 import { RotatingLines } from 'react-loader-spinner'
 import FormattedDate from "./FormattedDate";
 import WeatherTemp from "./WeatherTemp";
+import WeatherForecast from "./WeatherForecast";
+
 
 export default function Form(props) {
   const [ready, setReady] = useState(false);
@@ -75,21 +77,20 @@ export default function Form(props) {
             <h6 id="current-city">{weatherData.city}, {weatherData.country}</h6>          
             <div id="current-date"> Last updated on<FormattedDate date={weatherData.date} />
             </div>
-            <h6 className="current-forecast">Current Forecast</h6>
+            <h6 className="current-forecast">Currently</h6>
             <div className="row">
               <div className="col-sm-6">
-                <div className="card border-light">
+                <div className="card border-light h-100">
                   <div className="card-body">
                   <img src={weatherData.iconUrl} className="icon" id="icon" alt={weatherData.description}/>
                   <WeatherTemp celsius={weatherData.temperature} />
-                  
                   </div>
                 </div>
               </div>
               <div className="col-sm-6">
-                <div className="card border-light">
+                <div className="card border-light h-100">
                   <div className="card-body">
-                    <p className="text-capitalize">Description: {weatherData.description}</p>
+                    <p className="text-capitalize" id="card-one">Description: {weatherData.description}</p>
                     <p>Wind: {Math.round(weatherData.wind)} km/h</p>
                     <p>Humidity: {weatherData.humidity} %</p>
                   </div>
@@ -99,7 +100,11 @@ export default function Form(props) {
             <br />
             <div className="card-deck text-center" id="forecast"></div>
           </section>
+          <h6 className="forecast">Next Days</h6>
+          <br />
+          <WeatherForecast city={weatherData.city}/>
           </div>
+          
     );
   } else {
     displayWeather();
