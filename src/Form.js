@@ -63,7 +63,7 @@ export default function Form(props) {
               <div className="input-group-append">
                 <button
                   id="submit-button"
-                  className="btn btn-info"
+                  className="btn"
                   type="submit"
                   autoFocus="on"
                 >

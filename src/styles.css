@@ -7,7 +7,6 @@
   text-align: center;
 }
 
-
 .weather-app-wrapper {
   max-width: 700px;
   margin: 30px auto;
@@ -16,7 +15,6 @@
 .weather-app-wrapper .weather-app {
   margin: 30px auto;
 }
-
 
 .Weather h1 {
   margin-top: 0px;
@@ -27,27 +25,29 @@
 
 .Form p {
   text-align:center;
-  font-size: 12px;
+  font-size: 13px;
   margin-bottom: 5px;
 }
 
 .Form #card-one {
-  margin-top: 8px;
+  margin-top: 22px;
 }
-
-
 
 .Form .icon {
-  max-width: 20%;
+  max-width: 35%;
   display: block;
   margin: 0 auto;
-  color: #17a2b8;
 }
 
-.Form .text-muted {
-  font-size: 70%;
+.Form .form-control {
+  background-color: #facf5a0c;
+  font-family:  var(--primary-font);
 }
 
+.Form .btn {
+  background-color: #facf5a;
+  font-family:  var(--primary-font);
+}
 .Form .current-forecast{
   font-size: 14px;
   font-family:  var(--primary-font);
@@ -57,26 +57,30 @@
   font-size: 12px;
   font-family:  var(--primary-font);
   text-align: left;
-
 }
 
-.WeatherTemp #currenttemp, #unit {
-  font-size: 12px;
+.WeatherTemp #unit {
+  font-size: 13px;
   font-weight: 500;
   font-family:  var(--primary-font);
 }
 
+.WeatherTemp #currenttemp {
+  font-size: 20px;
+  font-weight: bold;
+  font-family:  var(--primary-font);
+}
 
 .Form #current-city {
  text-align: left;
  font-family:  var(--primary-font);
 }
+
 .Form #current-date {
   text-align: left;
   font-size: 12px;
   font-family:  var(--primary-font);
- }
- 
+}
 
 .Form .card-body {
   text-align: center;
@@ -88,5 +92,3 @@
   font-size: 15px;
   font-family:  var(--primary-font);
 }
-
-

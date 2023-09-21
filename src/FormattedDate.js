@@ -1,8 +1,5 @@
 import React from "react";
 
-
-
-
 export default function FormattedDate(props) {
     let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     let day = weekDays[props.date.getDay()];
